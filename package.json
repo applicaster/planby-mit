@@ -1,13 +1,13 @@
 {
   "name": "planby",
   "author": "Karol Kozer",
-  "version": "1.1.6",
-  "license": "Custom License",
+  "version": "1.1.4",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/karolkozer/planby"
   },
-  "homepage": "https://planby.app",
+  "homepage": "https://planby.netlify.app",
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/planby"
@@ -15,7 +15,8 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "engines": {
     "node": ">=10"

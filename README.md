@@ -65,7 +65,13 @@ Planby is a React based component for a quick implementation of Epg, schedules, 
 
 ## 🚀 [Become a Sponsor!](https://opencollective.com/planby) 🚀
 
-Become a sponsor, support, and help us in continuing our development. -> [Opencollective](https://opencollective.com/planby)
+Become a Sponsor and get exclusive access to Planby features and updates -> [GitHub Sponsors](https://github.com/sponsors/karolkozer)
+
+- Exclusive repository access 🚀
+- Exclusive content
+- New features
+- Updates
+- Support
 
 ## Getting Started
 
@@ -253,7 +259,7 @@ Inject own custom font and other global styles.
 const globalStyles = `
   @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
-/* Available in PRO plan */
+/* Available in sponsors plan */
  .planby {
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -855,7 +861,7 @@ import {
 
 ## License
 
-Custom License - All Rights Reserved. [See `LICENSE` for more information](https://planby.app/docs/planby-license.pdf).
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
