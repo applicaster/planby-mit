@@ -35,7 +35,8 @@ export function Loader() {
     <Box aria-label="loading">
       <div>
         <div>
-          <h1
+          <EPGLoadingSkeleton />
+          {/* <h1
             style={{
               color: 'white',
               textAlign: 'center',
@@ -44,7 +45,7 @@ export function Loader() {
             }}
           >
             Loading...
-          </h1>
+          </h1> */}
         </div>
 
         {/* <div
@@ -115,5 +116,44 @@ export function Loader() {
         </div> */}
       </div>
     </Box>
+  );
+}
+
+function EPGLoadingSkeleton() {
+  const styles = {
+    epgLoadingSkeleton: {
+      width: '100%',
+    },
+    programSkeleton: {
+      width: '100%',
+      backgroundColor: '#eee',
+      marginBottom: '10px',
+      animation: 'skeleton-loading 1.5s ease-in-out infinite alternate',
+    },
+    '@keyframes skeleton-loading': {
+      '0%': {
+        backgroundColor: 'hsl(200, 20%, 70%)',
+      },
+      '100%': {
+        backgroundColor: 'hsl(200, 20%, 95%)',
+      },
+    },
+  };
+
+  return (
+    <div style={styles.epgLoadingSkeleton}>
+      <div
+        style={styles.programSkeleton}
+        className="epg-loading-skeleton-item-height"
+      ></div>
+      <div
+        style={styles.programSkeleton}
+        className="epg-loading-skeleton-item-height"
+      ></div>
+      <div
+        style={styles.programSkeleton}
+        className="epg-loading-skeleton-item-height"
+      ></div>
+    </div>
   );
 }
