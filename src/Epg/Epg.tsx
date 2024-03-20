@@ -25,7 +25,6 @@ interface EpgProps {
   theme: Theme;
   globalStyles?: string;
   sidebarWidth: number;
-  loadingSkeletonItemHeight: number;
 }
 
 const { Container, Wrapper, Box } = EpgStyled;
@@ -44,15 +43,11 @@ export const Epg = React.forwardRef<HTMLDivElement, EpgProps>(
       isTimeline = true,
       isLoading = false,
       loader: LoaderComponent,
-      loadingSkeletonItemHeight,
       ...rest
     },
     containerRef
   ) => {
-    const renderLoader = () =>
-      LoaderComponent ?? (
-        <Loader loadingSkeletonItemHeight={loadingSkeletonItemHeight} />
-      );
+    const renderLoader = () => LoaderComponent ?? <Loader />;
     const epgGlobalStyles = customGlobalStyles ?? globalStyles;
     return (
       <ThemeProvider theme={theme}>
