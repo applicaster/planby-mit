@@ -2,10 +2,10 @@ import * as React from 'react';
 // import { theme } from '../theme/theme';
 
 // Import styles
-import { LoaderStyled } from '../styles';
+// import { LoaderStyled } from '../styles';
 
 // const { Box, Shape } = LoaderStyled;
-const { Box } = LoaderStyled;
+// const { Box } = LoaderStyled;
 
 // const Element = ({
 //   width,
@@ -36,13 +36,13 @@ export function Loader({
   loadingSkeletonItemHeight: number;
 }) {
   return (
-    <Box aria-label="loading">
+    // <Box aria-label="loading">
+    <div>
       <div>
-        <div>
-          <EPGLoadingSkeleton
-            loadingSkeletonItemHeight={loadingSkeletonItemHeight}
-          />
-          {/* <h1
+        <EPGLoadingSkeleton
+          loadingSkeletonItemHeight={loadingSkeletonItemHeight}
+        />
+        {/* <h1
             style={{
               color: 'white',
               textAlign: 'center',
@@ -52,9 +52,9 @@ export function Loader({
           >
             Loading...
           </h1> */}
-        </div>
+      </div>
 
-        {/* <div
+      {/* <div
           style={{ display: 'flex', justifyContent: 'end', marginBottom: 16 }}
         >
           <Element
@@ -120,8 +120,8 @@ export function Loader({
             }}
           />
         </div> */}
-      </div>
-    </Box>
+    </div>
+    // </Box>
   );
 }
 
