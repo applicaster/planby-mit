@@ -1,33 +1,34 @@
 import * as React from 'react';
-import { theme } from '../theme/theme';
+// import { theme } from '../theme/theme';
 
 // Import styles
 import { LoaderStyled } from '../styles';
 
-const { Box, Shape } = LoaderStyled;
+// const { Box, Shape } = LoaderStyled;
+const { Box } = LoaderStyled;
 
-const Element = ({
-  width,
-  color,
-  animate,
-  marginRight,
-  transition,
-}: {
-  width: number;
-  color: string;
-  transition: { duration: number; ease?: string; delay?: number };
-  animate: { right: string[] };
-  marginRight?: number;
-}) => (
-  <Shape
-    className="SHAPE"
-    width={width}
-    color={color}
-    animate={animate}
-    transition={transition}
-    marginRight={marginRight}
-  />
-);
+// const Element = ({
+//   width,
+//   color,
+//   animate,
+//   marginRight,
+//   transition,
+// }: {
+//   width: number;
+//   color: string;
+//   transition: { duration: number; ease?: string; delay?: number };
+//   animate: { right: string[] };
+//   marginRight?: number;
+// }) => (
+//   <Shape
+//     className="SHAPE"
+//     width={width}
+//     color={color}
+//     animate={animate}
+//     transition={transition}
+//     marginRight={marginRight}
+//   />
+// );
 
 export function Loader() {
   return (
