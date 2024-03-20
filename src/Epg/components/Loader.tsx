@@ -2,10 +2,10 @@ import * as React from 'react';
 // import { theme } from '../theme/theme';
 
 // Import styles
-// import { LoaderStyled } from '../styles';
+import { LoaderStyled } from '../styles';
 
 // const { Box, Shape } = LoaderStyled;
-// const { Box } = LoaderStyled;
+const { Box } = LoaderStyled;
 
 // const Element = ({
 //   width,
@@ -36,22 +36,11 @@ export function Loader({
   loadingSkeletonItemHeight: number;
 }) {
   return (
-    // <Box aria-label="loading">
-    <div>
+    <Box aria-label="loading">
       <div>
         <EPGLoadingSkeleton
           loadingSkeletonItemHeight={loadingSkeletonItemHeight}
         />
-        {/* <h1
-            style={{
-              color: 'white',
-              textAlign: 'center',
-              marginTop: '50px',
-              fontSize: '130px',
-            }}
-          >
-            Loading...
-          </h1> */}
       </div>
 
       {/* <div
@@ -120,8 +109,7 @@ export function Loader({
             }}
           />
         </div> */}
-    </div>
-    // </Box>
+    </Box>
   );
 }
 
@@ -133,16 +121,16 @@ function EPGLoadingSkeleton({
   const styles = {
     epgLoadingSkeleton: {
       width: '100%',
-      zIndex: 200,
+      zIndex: 300,
     },
     programSkeleton: {
       width: '100%',
-      // height: `${loadingSkeletonItemHeight}px`,
-      height: `150px`,
+      height: `${loadingSkeletonItemHeight}px`,
+      // height: `150px`,
       backgroundColor: '#eee',
       marginBottom: '10px',
       animation: 'skeleton-loading 1.5s ease-in-out infinite alternate',
-      zIndex: 200,
+      zIndex: 300,
     },
     '@keyframes skeleton-loading': {
       '0%': {
@@ -167,11 +155,6 @@ function EPGLoadingSkeleton({
       <div
         style={styles.programSkeleton}
         className="epg-loading-skeleton-item-height"
-      ></div>
-      <div
-        style={{
-          width: loadingSkeletonItemHeight,
-        }}
       ></div>
     </div>
   );
