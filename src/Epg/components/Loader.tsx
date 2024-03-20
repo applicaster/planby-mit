@@ -1,8 +1,8 @@
-import * as React from "react";
-import { theme } from "../theme/theme";
+import * as React from 'react';
+import { theme } from '../theme/theme';
 
 // Import styles
-import { LoaderStyled } from "../styles";
+import { LoaderStyled } from '../styles';
 
 const { Box, Shape } = LoaderStyled;
 
@@ -30,6 +30,19 @@ const Element = ({
 );
 
 export function Loader() {
+  return (
+    <h1
+      style={{
+        color: 'white',
+        textAlign: 'center',
+        marginTop: '50px',
+        fontSize: '130px',
+      }}
+    >
+      Loading...
+    </h1>
+  );
+  /*
   return (
     <Box aria-label="loading">
       <div>
@@ -102,4 +115,5 @@ export function Loader() {
       </div>
     </Box>
   );
+  */
 }
