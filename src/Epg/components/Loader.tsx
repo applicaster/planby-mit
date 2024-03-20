@@ -33,7 +33,20 @@ export function Loader() {
   return (
     <Box aria-label="loading">
       <div>
-        <div
+        <div>
+          <h1
+            style={{
+              color: 'white',
+              textAlign: 'center',
+              marginTop: '50px',
+              fontSize: '130px',
+            }}
+          >
+            Loading...
+          </h1>
+        </div>
+
+        {/* <div
           style={{ display: 'flex', justifyContent: 'end', marginBottom: 16 }}
         >
           <Element
@@ -59,19 +72,7 @@ export function Loader() {
             }}
           />
         </div>
-        <div>
-          <h1
-            style={{
-              color: 'white',
-              textAlign: 'center',
-              marginTop: '50px',
-              fontSize: '130px',
-            }}
-          >
-            Loading...
-          </h1>
-        </div>
-        {/* <div
+        <div
           style={{ display: 'flex', justifyContent: 'end', marginBottom: 16 }}
         >
           <Element
