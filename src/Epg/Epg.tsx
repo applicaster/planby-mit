@@ -1,17 +1,17 @@
-import React from "react";
-import { ThemeProvider, Global } from "@emotion/react";
+import React from 'react';
+import { ThemeProvider, Global } from '@emotion/react';
 
 // Import interfaces
-import { Theme } from "./helpers/interfaces";
+import { Theme } from './helpers/interfaces';
 
 // Import helpers
-import { TIMELINE_HEIGHT } from "./helpers";
+import { TIMELINE_HEIGHT } from './helpers';
 
 // Import styles
-import { globalStyles, EpgStyled } from "./styles";
+import { globalStyles, EpgStyled } from './styles';
 
 // Import components
-import { Loader } from "./components";
+import { Loader } from './components';
 
 interface EpgProps {
   width?: number;
@@ -25,6 +25,7 @@ interface EpgProps {
   theme: Theme;
   globalStyles?: string;
   sidebarWidth: number;
+  loadingSkeletonItemHeight: number;
 }
 
 const { Container, Wrapper, Box } = EpgStyled;
@@ -43,11 +44,15 @@ export const Epg = React.forwardRef<HTMLDivElement, EpgProps>(
       isTimeline = true,
       isLoading = false,
       loader: LoaderComponent,
+      loadingSkeletonItemHeight,
       ...rest
     },
     containerRef
   ) => {
-    const renderLoader = () => LoaderComponent ?? <Loader />;
+    const renderLoader = () =>
+      LoaderComponent ?? (
+        <Loader loadingSkeletonItemHeight={loadingSkeletonItemHeight} />
+      );
     const epgGlobalStyles = customGlobalStyles ?? globalStyles;
     return (
       <ThemeProvider theme={theme}>

@@ -30,12 +30,18 @@ const { Box } = LoaderStyled;
 //   />
 // );
 
-export function Loader() {
+export function Loader({
+  loadingSkeletonItemHeight,
+}: {
+  loadingSkeletonItemHeight: number;
+}) {
   return (
     <Box aria-label="loading">
       <div>
         <div>
-          <EPGLoadingSkeleton />
+          <EPGLoadingSkeleton
+            loadingSkeletonItemHeight={loadingSkeletonItemHeight}
+          />
           {/* <h1
             style={{
               color: 'white',
@@ -119,13 +125,18 @@ export function Loader() {
   );
 }
 
-function EPGLoadingSkeleton() {
+function EPGLoadingSkeleton({
+  loadingSkeletonItemHeight,
+}: {
+  loadingSkeletonItemHeight: number;
+}) {
   const styles = {
     epgLoadingSkeleton: {
       width: '100%',
     },
     programSkeleton: {
       width: '100%',
+      height: `${loadingSkeletonItemHeight}px`,
       backgroundColor: '#eee',
       marginBottom: '10px',
       animation: 'skeleton-loading 1.5s ease-in-out infinite alternate',
