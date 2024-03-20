@@ -133,13 +133,16 @@ function EPGLoadingSkeleton({
   const styles = {
     epgLoadingSkeleton: {
       width: '100%',
+      zIndex: 200,
     },
     programSkeleton: {
       width: '100%',
-      height: `${loadingSkeletonItemHeight}px`,
+      // height: `${loadingSkeletonItemHeight}px`,
+      height: `150px`,
       backgroundColor: '#eee',
       marginBottom: '10px',
       animation: 'skeleton-loading 1.5s ease-in-out infinite alternate',
+      zIndex: 200,
     },
     '@keyframes skeleton-loading': {
       '0%': {
@@ -164,6 +167,11 @@ function EPGLoadingSkeleton({
       <div
         style={styles.programSkeleton}
         className="epg-loading-skeleton-item-height"
+      ></div>
+      <div
+        style={{
+          width: loadingSkeletonItemHeight,
+        }}
       ></div>
     </div>
   );
