@@ -1,57 +1,44 @@
 import * as React from 'react';
-// import { theme } from '../theme/theme';
+import { theme } from '../theme/theme';
 
 // Import styles
-// import { LoaderStyled } from '../styles';
+import { LoaderStyled } from '../styles';
 
-// const { Shape } = LoaderStyled;
+const { Box, Shape } = LoaderStyled;
 
-// const Element = ({
-//   width,
-//   color,
-//   animate,
-//   marginRight,
-//   transition,
-// }: {
-//   width: number;
-//   color: string;
-//   transition: { duration: number; ease?: string; delay?: number };
-//   animate: { right: string[] };
-//   marginRight?: number;
-// }) => (
-//   <Shape
-//     className="SHAPE"
-//     width={width}
-//     color={color}
-//     animate={animate}
-//     transition={transition}
-//     marginRight={marginRight}
-//   />
-// );
+const Element = ({
+  width,
+  color,
+  animate,
+  marginRight,
+  transition,
+}: {
+  width: number;
+  color: string;
+  transition: { duration: number; ease?: string; delay?: number };
+  animate: { right: string[] };
+  marginRight?: number;
+}) => (
+  <Shape
+    className="SHAPE"
+    width={width}
+    color={color}
+    animate={animate}
+    transition={transition}
+    marginRight={marginRight}
+  />
+);
 
 export function Loader() {
-  return (
-    <h1
-      style={{
-        color: 'white',
-        textAlign: 'center',
-        marginTop: '50px',
-        fontSize: '130px',
-      }}
-    >
-      Loading...
-    </h1>
-  );
-  /*
   return (
     <Box aria-label="loading">
       <div>
         <div
-          style={{ display: "flex", justifyContent: "end", marginBottom: 16 }}
+          style={{ display: 'flex', justifyContent: 'end', marginBottom: 16 }}
         >
           <Element
             animate={{
-              right: ["0px", "75px", "0px"],
+              right: ['0px', '75px', '0px'],
             }}
             transition={{
               duration: 1,
@@ -64,7 +51,7 @@ export function Loader() {
             width={122}
             color={theme.loader.purple}
             animate={{
-              right: ["0px", "50px", "0px"],
+              right: ['0px', '50px', '0px'],
             }}
             transition={{
               duration: 1,
@@ -72,14 +59,26 @@ export function Loader() {
             }}
           />
         </div>
-        <div
-          style={{ display: "flex", justifyContent: "end", marginBottom: 16 }}
+        <div>
+          <h1
+            style={{
+              color: 'white',
+              textAlign: 'center',
+              marginTop: '50px',
+              fontSize: '130px',
+            }}
+          >
+            Loading...
+          </h1>
+        </div>
+        {/* <div
+          style={{ display: 'flex', justifyContent: 'end', marginBottom: 16 }}
         >
           <Element
             width={267}
             color={theme.loader.pink}
             animate={{
-              right: ["0px", "70px", "0px"],
+              right: ['0px', '70px', '0px'],
             }}
             transition={{
               delay: 0.5,
@@ -87,13 +86,13 @@ export function Loader() {
             }}
           />
         </div>
-        <div style={{ display: "flex", justifyContent: "end" }}>
+        <div style={{ display: 'flex', justifyContent: 'end' }}>
           <Element
             width={217}
             color={theme.loader.purple}
             marginRight={10}
             animate={{
-              right: ["0px", "95px", "0px"],
+              right: ['0px', '95px', '0px'],
             }}
             transition={{
               delay: 0.3,
@@ -104,16 +103,15 @@ export function Loader() {
             width={80}
             color={theme.loader.teal}
             animate={{
-              right: ["0px", "70px", "0px"],
+              right: ['0px', '70px', '0px'],
             }}
             transition={{
               duration: 1,
               delay: 0.33,
             }}
           />
-        </div>
+        </div> */}
       </div>
     </Box>
   );
-  */
 }
