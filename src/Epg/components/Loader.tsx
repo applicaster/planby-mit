@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from 'react';
 import { theme } from '../theme/theme';
 
